@@ -1,0 +1,69 @@
+@import "./variables.scss";
+
+* {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+body {
+  background-color: $darkBG;
+  font-size: $fs;
+  font-weight: $fw;
+  font-family: $ff;
+  color: $text;
+}
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding-inline: 1em;
+}
+
+.card {
+  background-color: $lightBG;
+  max-width: 25em;
+  padding: 2em;
+  padding-bottom: 3em;
+  border-radius: 0.8em;
+  box-shadow: 0 0 20px 0 rgba(black, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+  position: relative;
+}
+
+.header {
+  color: $primary;
+  font-size: 0.8em;
+  letter-spacing: 0.3rem;
+}
+
+.advice {
+  text-align: center;
+}
+
+.shuffle {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(50%);
+  padding: 1.3em;
+  border-radius: 50%;
+  border: none;
+  background-color: $primary;
+  cursor: pointer;
+  transition: box-shadow 200ms linear;
+
+  &:hover {
+      box-shadow: 0 0 30px 0 $primary;
+  }
+}
+
