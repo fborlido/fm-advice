@@ -8,7 +8,7 @@ const App = () => {
 
   const [advice, setAdvice] = useState({});
 
-  const fetchAdvice = async () => {
+  const fetchAdvice = () => {
     setAdvice({});
     axios
       .get(ADVICE_URL)
@@ -21,8 +21,8 @@ const App = () => {
       });
   };
 
-  useEffect(async () => {
-    await fetchAdvice();
+  useEffect(() => {
+    fetchAdvice();
   }, []);
 
   return (
